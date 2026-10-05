@@ -1,70 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Contact Form by Osmangazi">
-    <title>Contact Form | Osmangazi</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Osmangazi - Freelancer, Web Developer and Cybersecurity Learner">
+
+    <title>Osmangazi | Freelancer & Web Developer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="contact-card">
+    <!-- Theme Button -->
+    <button id="themeButton" onclick="toggleTheme()">
+        🌙 Dark Mode
+    </button>
 
-            <h1>Contact Me</h1>
-            <p class="subtitle">
-                Have a project or question? Send me a message.
-            </p>
 
-            <form id="contactForm">
+    <!-- Navigation -->
+    <nav>
 
-                <label for="name">Your Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
 
-                <label for="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    required
-                >
+    </nav>
 
-                <label for="message">Message</label>
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Write your message..."
-                    required
-                ></textarea>
 
-                <button type="submit">Send Message</button>
+    <!-- Home -->
+    <section id="home">
 
-                <p id="status"></p>
+        <p class="intro">
+            Assalamu Alaykum, I am
+        </p>
 
-            </form>
+        <h1>
+            Osmangazi 👋
+        </h1>
+
+        <h2>
+            Freelancer & Web Developer
+        </h2>
+
+        <p>
+            I am learning Web Development,
+            Data Entry and Cybersecurity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn">
+                🚀 View My Projects
+            </a>
+
+            <a href="#contact" class="btn secondary-btn">
+                📩 Contact Me
+            </a>
 
         </div>
-    </div>
 
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a beginner freelancer interested in
+            Web Development, Data Entry and Cybersecurity.
+        </p>
+
+        <p>
+            I enjoy learning new technologies and
+            building useful projects.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-list">
+
+            <span>HTML & CSS</span>
+            <span>JavaScript</span>
+            <span>Data Entry</span>
+            <span>Web Research</span>
+            <span>Linux</span>
+            <span>Cybersecurity Basics</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+
+        <h2>My Services</h2>
+
+        <div class="services-grid">
+
+
+            <!-- Service 1 -->
+            <div class="service-card">
+
+                <h3>
+                    🌐 Web Development
+                </h3>
+
+                <p>
+                    Simple and responsive websites
+                    using HTML, CSS and JavaScript.
+                </p>
+
+                <strong>
+                    Beginner
+                </strong>
+
+            </div>
+
+
+            <!-- Service 2 -->
+            <div class="service-card">
+
+                <h3>
+                    📊 Data Entry
+                </h3>
+
+                <p>
+                    Accurate data entry and
+                    basic document management.
+                </p>
+
+                <strong>
+                    Beginner
+                </strong>
+
+            </div>
+
+
+            <!-- Service 3 -->
+            <div class="service-card">
+
+                <h3>
+                    🔎 Web Research
+                </h3>
+
+                <p>
+                    Online research and collecting
+                    useful information from the web.
+                </p>
+
+                <strong>
+                    Beginner
+                </strong>
+
+            </div>
+
+
+            <!-- Service 4 -->
+            <div class="service-card">
+
+                <h3>
+                    🔐 Cybersecurity
+                </h3>
+
+                <p>
+                    Currently learning Linux,
+                    networking and cybersecurity basics.
+                </p>
+
+                <strong>
+                    Learning
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-grid">
+
+
+            <!-- Project 1 -->
+            <div class="project">
+
+                <h3>
+                    🌐 Personal Portfolio
+                </h3>
+
+                <p>
+                    A responsive freelancer portfolio
+                    built using HTML and CSS.
+                </p>
+
+                <p>
+                    <strong>Technology:</strong>
+                    HTML, CSS
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#home"
+                       class="btn">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/osmansk786428-art"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        View Code
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project">
+
+                <h3>
+                    📋 Contact Form
+                </h3>
+
+                <p>
+                    A contact form with JavaScript
+                    validation.
+                </p>
+
+                <p>
+                    <strong>Technology:</strong>
+                    HTML, CSS, JavaScript
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#contact"
+                       class="btn">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/osmansk786428-art"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        View Code
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="project">
+
+                <h3>
+                    🌙 Dark Mode Website
+                </h3>
+
+                <p>
+                    A website with JavaScript-powered
+                    Dark and Light Mode.
+                </p>
+
+                <p>
+                    <strong>Technology:</strong>
+                    HTML, CSS, JavaScript
+                </p>
+
+                <div class="project-buttons">
+
+                    <a href="#home"
+                       class="btn">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/osmansk786428-art"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        View Code
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Resume -->
+    <section id="resume">
+
+        <h2>
+            My Resume
+        </h2>
+
+        <p>
+            Interested in working with me?
+            You can view or download my CV.
+        </p>
+
+        <a href="resume.pdf"
+           target="_blank"
+           class="btn">
+            📄 View / Download CV
+        </a>
+
+    </section>
+
+
+    <!-- GitHub -->
+    <section id="github">
+
+        <h2>
+            GitHub
+        </h2>
+
+        <p>
+            I use GitHub to share my projects
+            and continue learning web development.
+        </p>
+
+        <a href="https://github.com/osmansk786428-art"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+            🐙 Visit My GitHub
+        </a>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <form>
+
+            <label for="name">
+                Name:
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+            >
+
+
+            <label for="email">
+                Email:
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+            >
+
+
+            <label for="message">
+                Message:
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message"
+            ></textarea>
+
+
+            <button
+                type="button"
+                onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Osmangazi. All Rights Reserved.
+        </p>
+
+        <p>
+            Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
     <script>
-        const form = document.getElementById("contactForm");
-        const status = document.getElementById("status");
 
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
+        /* =========================
+           Contact Form
+           ========================= */
 
-            status.textContent = "Message submitted successfully!";
+        function sendMessage() {
 
-            form.reset();
-        });
+            const name =
+                document.getElementById("name")
+                .value
+                .trim();
+
+            const email =
+                document.getElementById("email")
+                .value
+                .trim();
+
+            const message =
+                document.getElementById("message")
+                .value
+                .trim();
+
+
+            if (
+                name === "" ||
+                email === "" ||
+                message === ""
+            ) {
+
+                alert(
+                    "Please fill in all fields!"
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Message Sent Successfully!"
+            );
+
+        }
+
+
+        /* =========================
+           Dark Mode
+           ========================= */
+
+        function toggleTheme() {
+
+            document.body.classList.toggle(
+                "dark"
+            );
+
+
+            const button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            if (
+                document.body.classList.contains(
+                    "dark"
+                )
+            ) {
+
+                button.textContent =
+                    "☀️ Light Mode";
+
+            } else {
+
+                button.textContent =
+                    "🌙 Dark Mode";
+
+            }
+
+        }
+
     </script>
 
 </body>
+
 </html>
