@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Osmangazi | Freelancer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Theme Button -->
+    <button id="themeButton" onclick="toggleTheme()">
+        🌙 Dark Mode
+    </button>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <h1>Hello, I am Osmangazi 👋</h1>
+
+        <h2>Freelancer & Web Developer</h2>
+
+        <p>
+            I am learning Web Development,
+            Data Entry and Cybersecurity.
+        </p>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a beginner freelancer interested in
+            Web Development, Data Entry and Cybersecurity.
+        </p>
+
+        <p>
+            I enjoy learning new technologies and
+            building useful projects.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Data Entry</li>
+            <li>Web Research</li>
+            <li>Linux</li>
+            <li>Cybersecurity Basics</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+
+        <h2>My Services</h2>
+
+        <table>
+
+            <tr>
+                <th>Service</th>
+                <th>Level</th>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>Data Entry</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>Web Research</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>Cybersecurity</td>
+                <td>Learning</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project">
+
+        <h3>🌐 Personal Portfolio</h3>
+
+        <p>
+            A responsive freelancer portfolio
+            built using HTML and CSS.
+        </p>
+
+        <p>
+            <strong>Technology:</strong>
+            HTML, CSS
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <h3>📋 Contact Form</h3>
+
+        <p>
+            A contact form with JavaScript
+            validation.
+        </p>
+
+        <p>
+            <strong>Technology:</strong>
+            HTML, CSS, JavaScript
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <h3>🌙 Dark Mode Website</h3>
+
+        <p>
+            A website with JavaScript-powered
+            Dark and Light Mode.
+        </p>
+
+        <p>
+            <strong>Technology:</strong>
+            HTML, CSS, JavaScript
+        </p>
+
+    </div>
+
+</section>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <label>Name:</label>
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+            >
+
+            <br><br>
+
+
+            <label>Email:</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+            >
+
+            <br><br>
+
+
+            <label>Message:</label>
+
+            <textarea
+                name="message"
+                placeholder="Write your message"
+            ></textarea>
+
+            <br><br>
+
+
+            <button
+                type="button"
+                onclick="sendMessage()"
+            >
+                Send
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Osmangazi. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function sendMessage() {
+
+            let name =
+                document.querySelector(
+                    'input[name="name"]'
+                ).value;
+
+            let email =
+                document.querySelector(
+                    'input[name="email"]'
+                ).value;
+
+            let message =
+                document.querySelector(
+                    'textarea[name="message"]'
+                ).value;
+
+
+            if (
+                name === "" ||
+                email === "" ||
+                message === ""
+            ) {
+
+                alert("Please fill in all fields!");
+
+                return;
+            }
+
+
+            alert("Message Sent Successfully!");
+
+        }
+
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("dark");
+
+
+            let button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                button.textContent =
+                    "☀️ Light Mode";
+
+            } else {
+
+                button.textContent =
+                    "🌙 Dark Mode";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

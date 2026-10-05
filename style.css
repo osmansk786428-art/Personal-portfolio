@@ -1,0 +1,226 @@
+/* =========================
+   Global
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Sections
+   ========================= */
+
+section {
+    padding: 50px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+
+/* =========================
+   Home
+   ========================= */
+
+#home {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================
+   Skills
+   ========================= */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+/* =========================
+   Table
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+
+/* =========================
+   Form
+   ========================= */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#themeButton {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+/* =========================
+   Dark Mode
+   ========================= */
+
+.dark {
+    background: #222;
+    color: white;
+}
+
+.dark input,
+.dark textarea {
+    background: #333;
+    color: white;
+    border-color: #666;
+}
+
+.dark th,
+.dark td {
+    border-color: #666;
+}
+
+.dark section {
+    border-color: #555;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+
+}
+/* =========================
+   Projects
+   ========================= */
+
+.project {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.dark .project {
+    border-color: #666;
+}
