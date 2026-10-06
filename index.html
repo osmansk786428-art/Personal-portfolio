@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
@@ -17,179 +16,241 @@
 
 <body>
 
-    <!-- Theme Button -->
-    <button id="themeButton" onclick="toggleTheme()">
-        🌙 Dark Mode
-    </button>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Osmangazi
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#resume">Resume</a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/osmansk786428-art"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <button onclick="toggleTheme()"
+                    id="themeBtn"
+                    class="theme-btn">
+                🌙 Dark Mode
+            </button>
+
+        </nav>
+    </header>
 
 
-    <!-- Navigation -->
-    <nav>
+    <!-- ================= HOME ================= -->
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#github">GitHub</a>
-        <a href="#contact">Contact</a>
+    <section id="home" class="hero">
 
-    </nav>
+        <div class="hero-content">
 
+            <p>
+                Assalamu Alaykum, I am
+            </p>
 
-    <!-- Home -->
-    <section id="home">
+            <h1>
+                Osmangazi 👋
+            </h1>
 
-        <p class="intro">
-            Assalamu Alaykum, I am
-        </p>
+            <h2>
+                Freelancer & Web Developer
+            </h2>
 
-        <h1>
-            Osmangazi 👋
-        </h1>
+            <p>
+                I am learning Web Development,
+                Data Entry and Cybersecurity.
+            </p>
 
-        <h2>
-            Freelancer & Web Developer
-        </h2>
+            <div class="hero-buttons">
 
-        <p>
-            I am learning Web Development,
-            Data Entry and Cybersecurity.
-        </p>
+                <a href="#projects"
+                   class="btn">
+                    View My Projects
+                </a>
 
-        <div class="hero-buttons">
+                <a href="#contact"
+                   class="btn secondary-btn">
+                    Contact Me
+                </a>
 
-            <a href="#projects" class="btn">
-                🚀 View My Projects
-            </a>
-
-            <a href="#contact" class="btn secondary-btn">
-                📩 Contact Me
-            </a>
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- About -->
+    <!-- ================= ABOUT ================= -->
+
     <section id="about">
 
-        <h2>About Me</h2>
+        <div class="container">
 
-        <p>
-            I am a beginner freelancer interested in
-            Web Development, Data Entry and Cybersecurity.
-        </p>
+            <h2>
+                About Me
+            </h2>
 
-        <p>
-            I enjoy learning new technologies and
-            building useful projects.
-        </p>
+            <p>
+                I am a beginner freelancer interested in
+                Web Development, Data Entry and Cybersecurity.
+            </p>
+
+            <p>
+                I enjoy learning new technologies and
+                building useful projects.
+            </p>
+
+        </div>
 
     </section>
 
 
-    <!-- Skills -->
+    <!-- ================= SKILLS ================= -->
+
     <section id="skills">
 
-        <h2>My Skills</h2>
+        <div class="container">
 
-        <div class="skills-list">
+            <h2>
+                My Skills
+            </h2>
 
-            <span>HTML & CSS</span>
-            <span>JavaScript</span>
-            <span>Data Entry</span>
-            <span>Web Research</span>
-            <span>Linux</span>
-            <span>Cybersecurity Basics</span>
+            <div class="skills-grid">
+
+                <div class="skill">
+                    HTML & CSS
+                </div>
+
+                <div class="skill">
+                    JavaScript
+                </div>
+
+                <div class="skill">
+                    Data Entry
+                </div>
+
+                <div class="skill">
+                    Web Research
+                </div>
+
+                <div class="skill">
+                    Linux
+                </div>
+
+                <div class="skill">
+                    Cybersecurity Basics
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- Services -->
+    <!-- ================= SERVICES ================= -->
+
     <section id="services">
 
-        <h2>My Services</h2>
+        <div class="container">
 
-        <div class="services-grid">
+            <h2>
+                My Services
+            </h2>
 
+            <div class="services-grid">
 
-            <!-- Service 1 -->
-            <div class="service-card">
+                <div class="service-card">
 
-                <h3>
-                    🌐 Web Development
-                </h3>
+                    <h3>
+                        💻 Web Development
+                    </h3>
 
-                <p>
-                    Simple and responsive websites
-                    using HTML, CSS and JavaScript.
-                </p>
+                    <p>
+                        I can create simple and responsive
+                        websites using HTML, CSS and JavaScript.
+                    </p>
 
-                <strong>
-                    Beginner
-                </strong>
-
-            </div>
+                </div>
 
 
-            <!-- Service 2 -->
-            <div class="service-card">
+                <div class="service-card">
 
-                <h3>
-                    📊 Data Entry
-                </h3>
+                    <h3>
+                        📊 Data Entry
+                    </h3>
 
-                <p>
-                    Accurate data entry and
-                    basic document management.
-                </p>
+                    <p>
+                        Accurate data entry and basic
+                        data management services.
+                    </p>
 
-                <strong>
-                    Beginner
-                </strong>
-
-            </div>
+                </div>
 
 
-            <!-- Service 3 -->
-            <div class="service-card">
+                <div class="service-card">
 
-                <h3>
-                    🔎 Web Research
-                </h3>
+                    <h3>
+                        🔎 Web Research
+                    </h3>
 
-                <p>
-                    Online research and collecting
-                    useful information from the web.
-                </p>
+                    <p>
+                        Online research, information
+                        collection and data organization.
+                    </p>
 
-                <strong>
-                    Beginner
-                </strong>
-
-            </div>
+                </div>
 
 
-            <!-- Service 4 -->
-            <div class="service-card">
+                <div class="service-card">
 
-                <h3>
-                    🔐 Cybersecurity
-                </h3>
+                    <h3>
+                        🔐 Cybersecurity
+                    </h3>
 
-                <p>
-                    Currently learning Linux,
-                    networking and cybersecurity basics.
-                </p>
+                    <p>
+                        Basic cybersecurity learning,
+                        Linux and security-related tasks.
+                    </p>
 
-                <strong>
-                    Learning
-                </strong>
+                </div>
 
             </div>
 
@@ -198,15 +259,19 @@
     </section>
 
 
-    <!-- Projects -->
+    <!-- ================= PROJECTS ================= -->
+
     <section id="projects">
 
-        <h2>My Projects</h2>
+        <div class="container">
 
-        <div class="projects-grid">
+            <h2>
+                My Projects
+            </h2>
 
 
             <!-- Project 1 -->
+
             <div class="project">
 
                 <h3>
@@ -214,18 +279,15 @@
                 </h3>
 
                 <p>
-                    A responsive freelancer portfolio
-                    built using HTML and CSS.
-                </p>
-
-                <p>
-                    <strong>Technology:</strong>
-                    HTML, CSS
+                    A professional personal portfolio website
+                    built using HTML, CSS and JavaScript.
                 </p>
 
                 <div class="project-buttons">
 
-                    <a href="#home"
+                    <a href="https://osmansk786428-art.github.io/Personal-portfolio/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        class="btn">
                         Live Demo
                     </a>
@@ -243,25 +305,23 @@
 
 
             <!-- Project 2 -->
+
             <div class="project">
 
                 <h3>
-                    📋 Contact Form
+                    📩 Contact Form
                 </h3>
 
                 <p>
-                    A contact form with JavaScript
-                    validation.
-                </p>
-
-                <p>
-                    <strong>Technology:</strong>
-                    HTML, CSS, JavaScript
+                    A simple and responsive contact form
+                    created using HTML, CSS and JavaScript.
                 </p>
 
                 <div class="project-buttons">
 
-                    <a href="#contact"
+                    <a href="https://osmansk786428-art.github.io/contact-form/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        class="btn">
                         Live Demo
                     </a>
@@ -279,6 +339,7 @@
 
 
             <!-- Project 3 -->
+
             <div class="project">
 
                 <h3>
@@ -290,14 +351,11 @@
                     Dark and Light Mode.
                 </p>
 
-                <p>
-                    <strong>Technology:</strong>
-                    HTML, CSS, JavaScript
-                </p>
-
                 <div class="project-buttons">
 
-                    <a href="#home"
+                    <a href="https://osmansk786428-art.github.io/Dark-Mode-Website-/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        class="btn">
                         Live Demo
                     </a>
@@ -318,105 +376,111 @@
     </section>
 
 
-    <!-- Resume -->
+    <!-- ================= RESUME ================= -->
+
     <section id="resume">
 
-        <h2>
-            My Resume
-        </h2>
+        <div class="container">
 
-        <p>
-            Interested in working with me?
-            You can view or download my CV.
-        </p>
+            <h2>
+                My Resume
+            </h2>
 
-        <a href="resume.pdf"
-           target="_blank"
-           class="btn">
-            📄 View / Download CV
-        </a>
+            <p>
+                You can view or download my professional resume.
+            </p>
+
+            <a href="resume.pdf"
+               target="_blank"
+               class="btn">
+                📄 View / Download CV
+            </a>
+
+        </div>
 
     </section>
 
 
-    <!-- GitHub -->
+    <!-- ================= GITHUB ================= -->
+
     <section id="github">
 
-        <h2>
-            GitHub
-        </h2>
+        <div class="container">
 
-        <p>
-            I use GitHub to share my projects
-            and continue learning web development.
-        </p>
+            <h2>
+                GitHub
+            </h2>
 
-        <a href="https://github.com/osmansk786428-art"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn">
-            🐙 Visit My GitHub
-        </a>
+            <p>
+                Check out my projects and coding activities
+                on GitHub.
+            </p>
+
+            <a href="https://github.com/osmansk786428-art"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                View My GitHub
+            </a>
+
+        </div>
 
     </section>
 
 
-    <!-- Contact -->
+    <!-- ================= CONTACT ================= -->
+
     <section id="contact">
 
-        <h2>
-            Contact Me
-        </h2>
+        <div class="container">
 
-        <form>
+            <h2>
+                Contact Me
+            </h2>
 
-            <label for="name">
-                Name:
-            </label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-            >
+            <p>
+                Interested in working together?
+                Send me a message.
+            </p>
 
 
-            <label for="email">
-                Email:
-            </label>
+            <form onsubmit="sendMessage(event)">
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-            >
+                <input type="text"
+                       id="name"
+                       placeholder="Your Name"
+                       required>
 
 
-            <label for="message">
-                Message:
-            </label>
-
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message"
-            ></textarea>
+                <input type="email"
+                       id="email"
+                       placeholder="Your Email"
+                       required>
 
 
-            <button
-                type="button"
-                onclick="sendMessage()">
-                Send Message
-            </button>
+                <textarea id="message"
+                          placeholder="Your Message"
+                          rows="6"
+                          required></textarea>
 
-        </form>
+
+                <button type="submit"
+                        class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+
+            <p id="formMessage"></p>
+
+        </div>
 
     </section>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <p>
@@ -424,90 +488,68 @@
         </p>
 
         <p>
-            Built with HTML, CSS & JavaScript.
+            Freelancer & Web Developer
         </p>
 
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script>
 
-        /* =========================
-           Contact Form
-           ========================= */
+        function toggleTheme() {
 
-        function sendMessage() {
+            document.body.classList.toggle("dark");
 
-            const name =
-                document.getElementById("name")
-                .value
-                .trim();
+            const themeBtn =
+                document.getElementById("themeBtn");
 
-            const email =
-                document.getElementById("email")
-                .value
-                .trim();
+            if (document.body.classList.contains("dark")) {
 
-            const message =
-                document.getElementById("message")
-                .value
-                .trim();
+                themeBtn.innerHTML = "☀️ Light Mode";
 
+            } else {
 
-            if (
-                name === "" ||
-                email === "" ||
-                message === ""
-            ) {
+                themeBtn.innerHTML = "🌙 Dark Mode";
 
-                alert(
-                    "Please fill in all fields!"
-                );
-
-                return;
             }
-
-
-            alert(
-                "Message Sent Successfully!"
-            );
 
         }
 
 
-        /* =========================
-           Dark Mode
-           ========================= */
+        function sendMessage(event) {
 
-        function toggleTheme() {
+            event.preventDefault();
 
-            document.body.classList.toggle(
-                "dark"
-            );
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const message =
+                document.getElementById("message").value.trim();
+
+            const formMessage =
+                document.getElementById("formMessage");
 
 
-            const button =
-                document.getElementById(
-                    "themeButton"
-                );
+            if (!name || !email || !message) {
 
+                formMessage.innerHTML =
+                    "Please fill in all fields.";
 
-            if (
-                document.body.classList.contains(
-                    "dark"
-                )
-            ) {
-
-                button.textContent =
-                    "☀️ Light Mode";
-
-            } else {
-
-                button.textContent =
-                    "🌙 Dark Mode";
+                return;
 
             }
+
+
+            formMessage.innerHTML =
+                "Message Sent Successfully!";
+
+
+            document.querySelector("form").reset();
 
         }
 
