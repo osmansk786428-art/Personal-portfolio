@@ -583,3 +583,278 @@ body.dark .secondary-btn:hover {
         font-size: 1.8rem;
     }
 }
+/* =========================
+   PHASE 3 — PREMIUM EFFECTS
+========================= */
+
+/* Smooth page appearance */
+section {
+    animation: sectionFade 0.7s ease both;
+}
+
+@keyframes sectionFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero premium glow */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    top: 10%;
+    left: -120px;
+
+    background: rgba(37, 99, 235, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(10px);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -80px;
+    bottom: 5%;
+
+    background: rgba(14, 165, 233, 0.10);
+
+    border-radius: 50%;
+
+    filter: blur(15px);
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero title gradient */
+.hero h1 {
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+/* Better section headings */
+section h2 {
+    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin: 10px auto 0;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+}
+
+/* Skill cards */
+.skill {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #2563eb;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.skill:hover::before {
+    transform: scaleX(1);
+}
+
+/* Service cards */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -35px;
+    top: -35px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::after {
+    transform: scale(2);
+}
+
+/* Project cards */
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #2563eb;
+
+    transform: scaleY(0);
+
+    transform-origin: bottom;
+
+    transition: transform 0.3s ease;
+}
+
+.project:hover::before {
+    transform: scaleY(1);
+}
+
+/* Better project buttons */
+.project-buttons .btn {
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Contact form card effect */
+#contact form {
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+/* Dark contact form */
+body.dark #contact form {
+    background: #111827;
+    border-color: #1e293b;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Better footer */
+footer {
+    border-top: 1px solid #1e293b;
+}
+
+/* Button shine effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: skewX(-20deg);
+
+    transition: left 0.5s ease;
+}
+
+.btn:hover::after {
+    left: 130%;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+
+    #contact form {
+        padding: 20px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-buttons .btn {
+        width: 100%;
+    }
+}
