@@ -858,3 +858,61 @@ footer {
         width: 100%;
     }
 }
+/* =========================
+   PHASE 4 — HERO
+========================= */
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero-greeting {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+.hero-description {
+    max-width: 680px;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 22px;
+
+    font-weight: 600;
+}
+
+.hero-links a {
+    color: #64748b;
+    transition: color 0.25s ease;
+}
+
+.hero-links a:hover {
+    color: #2563eb;
+}
+
+body.dark .hero-links a {
+    color: #94a3b8;
+}
+
+body.dark .hero-links a:hover {
+    color: #60a5fa;
+}
+
+@media (max-width: 600px) {
+
+    .hero-greeting {
+        font-size: 1rem;
+    }
+
+    .hero-links {
+        font-size: 0.95rem;
+    }
+}
