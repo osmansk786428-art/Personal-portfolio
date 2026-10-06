@@ -1,33 +1,25 @@
-/* =========================
-   Global
-   ========================= */
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 20px;
 
     background: #f4f4f4;
-
     color: #222;
 
     line-height: 1.6;
 
     transition:
-        background 0.3s,
-        color 0.3s;
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
 a {
@@ -36,73 +28,105 @@ a {
 
 
 /* =========================
-   Theme Button
+   NAVBAR
    ========================= */
 
-#themeButton {
-    display: block;
-
-    margin-left: auto;
-
-    margin-bottom: 20px;
+header {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
 }
 
-
-/* =========================
-   Navigation
-   ========================= */
-
-nav {
+.navbar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-bottom: 30px;
-
-    padding: 15px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 12px;
+    padding: 15px 20px;
 
     background: white;
 
-    position: sticky;
+    border: 1px solid #ddd;
+    border-radius: 14px;
 
-    top: 10px;
-
-    z-index: 100;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-nav a {
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+
+    padding: 8px 10px;
+
+    border-radius: 7px;
+
     text-decoration: none;
 
+    font-size: 14px;
     font-weight: bold;
 
-    padding: 8px 12px;
-
-    border-radius: 6px;
-
-    transition: 0.3s;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
-nav a:hover {
+.nav-links a:hover {
     background: #222;
-
     color: white;
+}
+
+.theme-btn {
+    padding: 9px 13px;
+
+    border: 1px solid #222;
+    border-radius: 8px;
+
+    background: #222;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 
 
 /* =========================
-   Sections
+   SECTIONS
    ========================= */
 
 section {
-    padding: 60px 0;
+    padding: 70px 0;
 
     border-bottom: 1px solid #ccc;
 }
@@ -111,15 +135,21 @@ section:last-of-type {
     border-bottom: none;
 }
 
-h1 {
-    font-size: 48px;
+.container {
+    width: 100%;
+}
 
-    margin: 5px 0;
+h1 {
+    font-size: 52px;
+    line-height: 1.2;
+
+    margin: 5px 0 10px;
 }
 
 h2 {
     font-size: 32px;
 
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -133,126 +163,127 @@ p {
 
 
 /* =========================
-   Home / Hero
+   HERO
    ========================= */
 
 #home {
-    min-height: 500px;
+    min-height: 520px;
 
     display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
+    align-items: center;
 }
 
-.intro {
+.hero-content {
+    width: 100%;
+}
+
+.hero-content > p:first-child {
     font-size: 20px;
 
     font-weight: bold;
 
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 #home h2 {
     margin-top: 5px;
+
+    font-size: 28px;
 }
 
-#home p:not(.intro) {
+#home .hero-content > p {
     font-size: 18px;
 }
 
 
 /* =========================
-   Buttons
+   BUTTONS
    ========================= */
 
-.btn,
-button {
+.btn {
     display: inline-block;
 
     padding: 11px 20px;
 
-    border: none;
-
+    border: 1px solid #222;
     border-radius: 8px;
+
+    background: #222;
+    color: white;
 
     cursor: pointer;
 
     font-size: 16px;
-
     font-weight: bold;
 
     text-decoration: none;
 
-    background: #222;
-
-    color: white;
-
     transition:
-        transform 0.2s,
-        opacity 0.2s;
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background 0.2s ease;
 }
 
-.btn:hover,
-button:hover {
+.btn:hover {
     transform: translateY(-2px);
-
     opacity: 0.85;
-}
-
-.hero-buttons {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 20px;
 }
 
 .secondary-btn {
     background: transparent;
-
     color: #222;
-
-    border: 1px solid #222;
 }
 
-
-/* =========================
-   Skills
-   ========================= */
-
-.skills-list {
+.hero-buttons {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 12px;
-}
 
-.skills-list span {
-    padding: 10px 16px;
-
-    border: 1px solid #999;
-
-    border-radius: 20px;
-
-    background: white;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.skills-list span:hover {
-    transform: translateY(-3px);
+    margin-top: 25px;
 }
 
 
 /* =========================
-   Services
+   SKILLS
+   ========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.skill {
+    padding: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    background: white;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   SERVICES
    ========================= */
 
 .services-grid {
@@ -268,64 +299,51 @@ button:hover {
     padding: 25px;
 
     border: 1px solid #ccc;
-
     border-radius: 12px;
 
     background: white;
 
     transition:
-        transform 0.3s,
-        box-shadow 0.3s;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.08);
-}
-
-.service-card strong {
-    display: inline-block;
-
-    margin-top: 10px;
+        0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 
 /* =========================
-   Projects
+   PROJECTS
    ========================= */
 
-.projects-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
-}
-
 .project {
+    margin-bottom: 20px;
+
     padding: 25px;
 
     border: 1px solid #ccc;
-
     border-radius: 12px;
 
     background: white;
 
     transition:
-        transform 0.3s,
-        box-shadow 0.3s;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project:last-child {
+    margin-bottom: 0;
 }
 
 .project:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.08);
+        0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .project h3 {
@@ -334,7 +352,6 @@ button:hover {
 
 .project-buttons {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 10px;
@@ -350,7 +367,7 @@ button:hover {
 
 
 /* =========================
-   Resume & GitHub
+   RESUME & GITHUB
    ========================= */
 
 #resume,
@@ -361,61 +378,74 @@ button:hover {
 #resume p,
 #github p {
     margin-left: auto;
-
     margin-right: auto;
 }
 
 
 /* =========================
-   Contact Form
+   CONTACT
    ========================= */
+
+#contact {
+    text-align: left;
+}
+
+#contact p {
+    margin-bottom: 25px;
+}
 
 form {
     max-width: 700px;
-}
-
-label {
-    display: block;
-
-    margin-top: 15px;
-
-    font-weight: bold;
 }
 
 input,
 textarea {
     width: 100%;
 
-    padding: 12px;
+    display: block;
 
-    margin-top: 5px;
+    padding: 13px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
 
     border: 1px solid #999;
-
     border-radius: 8px;
 
-    font-size: 16px;
+    background: white;
+    color: #222;
 
     font-family: inherit;
+    font-size: 16px;
 
-    background: white;
+    outline: none;
 
-    color: #222;
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #222;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.08);
 }
 
 textarea {
-    min-height: 130px;
+    min-height: 140px;
 
     resize: vertical;
 }
 
 form button {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 
 /* =========================
-   Footer
+   FOOTER
    ========================= */
 
 footer {
@@ -430,40 +460,47 @@ footer p {
 
 
 /* =========================
-   Dark Mode
+   DARK MODE
    ========================= */
 
 .dark {
     background: #181818;
-
     color: #f5f5f5;
 }
 
-.dark nav {
+.dark .navbar {
     background: #242424;
-
     border-color: #444;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.dark nav a:hover {
-    background: #fff;
-
+.dark .nav-links a:hover {
+    background: white;
     color: #111;
 }
 
+.dark .theme-btn {
+    background: white;
+    color: #111;
+
+    border-color: white;
+}
+
+.dark .skill,
 .dark .service-card,
-.dark .project,
-.dark .skills-list span {
+.dark .project {
     background: #242424;
 
     border-color: #555;
 }
 
+.dark .skill:hover,
 .dark .service-card:hover,
 .dark .project:hover {
     box-shadow:
-        0 8px 20px
-        rgba(255, 255, 255, 0.05);
+        0 8px 20px rgba(255, 255, 255, 0.05);
 }
 
 .dark input,
@@ -475,80 +512,122 @@ footer p {
     border-color: #666;
 }
 
+.dark input:focus,
+.dark textarea:focus {
+    border-color: white;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
 .dark section {
     border-color: #444;
 }
 
 .dark .secondary-btn {
+    background: transparent;
+
     color: white;
+
+    border-color: white;
+}
+
+.dark .btn:not(.secondary-btn) {
+    background: white;
+    color: #111;
 
     border-color: white;
 }
 
 
 /* =========================
-   Tablet
+   TABLET
    ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     body {
         padding: 15px;
     }
 
-    h1 {
-        font-size: 38px;
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
-    h2 {
-        font-size: 28px;
+    .logo {
+        width: 100%;
+
+        text-align: center;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
 
 
 /* =========================
-   Mobile
+   MOBILE
    ========================= */
 
 @media (max-width: 600px) {
 
-    nav {
-        position: static;
-
-        justify-content: flex-start;
+    body {
+        padding: 10px;
     }
 
-    nav a {
-        font-size: 14px;
+    header {
+        position: static;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+
+        gap: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding: 7px 8px;
+
+        font-size: 13px;
+    }
+
+    .theme-btn {
+        width: 100%;
     }
 
     section {
-        padding: 45px 0;
+        padding: 50px 0;
     }
 
     #home {
-        min-height: 400px;
+        min-height: 430px;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     h2 {
-        font-size: 25px;
+        font-size: 27px;
     }
 
     #home h2 {
-        font-size: 22px;
+        font-size: 23px;
+    }
+
+    #home .hero-content > p {
+        font-size: 16px;
     }
 
     .hero-buttons {
@@ -558,7 +637,17 @@ footer p {
     }
 
     .hero-buttons .btn {
+        width: 100%;
+
         text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
     .project-buttons {
@@ -566,6 +655,8 @@ footer p {
     }
 
     .project-buttons .btn {
+        width: 100%;
+
         text-align: center;
     }
 
