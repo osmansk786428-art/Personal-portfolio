@@ -37,7 +37,16 @@
             </div>
 
 
-            <ul class="nav-links">
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
 
                 <li>
                     <a href="#home">Home</a>
@@ -82,15 +91,12 @@
                     id="themeBtn"
                     class="theme-btn"
                     type="button">
-
                 🌙 Dark Mode
-
             </button>
 
         </nav>
 
     </header>
-
 
 
     <!-- =========================
@@ -637,6 +643,45 @@
 
     </script>
 
+
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuToggle.innerHTML = isOpen ? "✕" : "☰";
+
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.innerHTML = "☰";
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
